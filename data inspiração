@@ -1,0 +1,74 @@
+<html>
+<cabeça>
+    <title>Noção de widget de data</title>
+    <estilo>
+      #lb{
+        exibição: flexível;
+        família de fontes: sem serifa;
+        tamanho da fonte: 18pt;
+        cor: #72b2e4;
+        preenchimento: 5px;
+        borda: 1px sólido #ffffff;
+        justificar-conteúdo: esquerda;
+        altura da linha: 1,5;
+        altura: 85%;
+        intensidade da fonte: Negrito;
+        direção flexível: linha;
+      }
+
+      #container {
+        exibição: flexível;
+        align-items: flex-start;
+      }
+
+      #encontro{
+          tamanho da fonte: 12pt;
+          intensidade da fonte: Negrito;
+      }
+
+      corpo{
+          cor de fundo: #ffffff;
+      }
+    </style>
+</head>
+<corpo>
+    <div id="lbl"></div>
+</body>
+
+<script>
+    var dia da semana = new Array(7);
+    dia da semana[0] = "domingo";
+    dia da semana[1] = "segunda-feira";
+    dia da semana[2] = "terça-feira";
+    dia da semana[3] = "quarta-feira";
+    dia da semana[4] = "quinta-feira";
+    dia da semana[5] = "sexta-feira";
+    dia da semana[6] = "sábado";
+
+    const mêsNomes = ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
+      "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+    ];
+
+    
+    var hoje = new Date();
+    var horas = hoje.getHours();
+    var diaDaSemana = dia da semana[hoje.getDia()];
+    var data = `${dayOfWeek}, ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()}`;
+
+    var saudar;
+
+    se (horas < 12)
+        saudar = 'Bom dia, Isah ♡. ';
+    senão se (horas >= 12 && horas <= 17)
+        saudar = 'Boa tarde, Isah ♡. ';
+    senão se (horas >= 17 && horas <= 24)
+        saudar = 'Boa noite, Isah ♡. ';
+
+    document.getElementById('lbl').innerHTML = `
+        <div class="container">
+          <div id="date"> ${date}</div>
+          <div class="greeting">${greet}</div>
+        <div/>
+    `;
+</script>
+</html>
